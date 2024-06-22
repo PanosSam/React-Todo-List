@@ -1,0 +1,21 @@
+body{
+    margin:0;
+    padding: 0;
+} 
+
+.container{ 
+    margin: auto;
+    width: 1664px;
+    height: 1386px;
+    top: -793px;
+    left: -1066px;
+    gap: 0px;
+    opacity: 0px;
+    background-color:#92B7FF; 
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
