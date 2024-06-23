@@ -2,6 +2,7 @@
 import TodoItem from "./TodoItem.jsx"
 import TodoHeader from "./TodoHeader";
 import TodoActions from "./TodoActions";
+import Detective from "../assets/Detective.png";
 import "./TodoList.css"
 
 
@@ -29,7 +30,7 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
          </div>
 
          <ul className="list">
-            {todos.length === 0 && "No Todos"}
+          {todos.length === 0 && <img src={Detective} alt="" />}
             {filteredTodos.map(todo => {
              return (
             <TodoItem {...todo} key={todo.id} 

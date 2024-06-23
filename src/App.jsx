@@ -136,7 +136,7 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
         
 
         <Modal 
-        className="container_modal"
+        /* className={container_modal} */
         open={isOpen} 
         onClose={()=>setIsOpen(false)}  
         onSubmit={addTodo}

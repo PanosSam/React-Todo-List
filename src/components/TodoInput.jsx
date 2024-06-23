@@ -1,33 +1,27 @@
-import React,{useState} from 'react'
+import { useRef } from "react";
+import "./Modal.css";
 
-export default  function TodoInput({onSubmit, onClose}) {
-    const [title, setTitle] = useState("");
+export default  function TodoInput({title,setTitle,handle}) {
+  
+  const inputRef = useRef(null);
 
-    const handleSubmit = () => {
-      onSubmit(title);
-      setTitle("");
-      onClose();
-      
-    };
-  function handle(e) {
-    if (e.keyCode === 13) {
-      e.preventDefault(); // Ensure it is only this code that runs
-
-     handleSubmit()
+  const handleContainerClick = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
     }
-  }
+  };
+
   return (
-    <div>
-    <input
+    <div className='item container_modal--inputBar' onClick={handleContainerClick}>
+     <input className='container_modal--input'
       type="text"
       value={title}
       onChange={(e) => setTitle(e.target.value) }
-        onKeyDown={(e) => handle(e)}
-      placeholder="Enter todo title"
-    />
-    <button onClick={handleSubmit} >Add</button>
-    <button onClick={onClose}>Close</button>
-  </div>
+      onKeyDown={(e) => handle(e)}
+      placeholder="Input your note..."
+      ref={inputRef}
+      />
+    </div>
   )
 }
 

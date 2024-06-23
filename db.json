@@ -1,24 +1,3 @@
 {
-  "todos": [
-    {
-      "id": "1",
-      "title": "asdasds",
-      "completed": false
-    },
-    {
-      "id": "2",
-      "title": "popoopo",
-      "completed": false
-    },
-    {
-      "id": "3",
-      "title": "asdasd",
-      "completed": false
-    },
-    {
-      "id": "4",
-      "title": "pannossss",
-      "completed": false
-    }
-  ]
+  "todos": []
 }
