@@ -16,11 +16,8 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
 
     return (
         <div className="todolist_container">
-
           <div className="todolist_head">
-            
           <h1 className="todolist_h1">TODO LIST</h1>
-
            <TodoHeader 
            searchTerm={searchTerm} 
            setSearchTerm={setSearchTerm} 
@@ -28,7 +25,7 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
            setFilter={setFilter}
            />
          </div>
-
+         <div className="todolist_body">
          <ul className="list">
           {todos.length === 0 && <img src={Detective} alt="" />}
             {filteredTodos.map(todo => {
@@ -36,12 +33,11 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
             <TodoItem {...todo} key={todo.id} 
             toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
          )
-        
           })}
          </ul>
-
          <TodoActions setIsOpen={setIsOpen}/>
         </div>
+      </div>
     )
    
 }

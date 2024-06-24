@@ -1,5 +1,5 @@
 .todolist{
-    width: 1400px;
+width: 1400px;
 height: 710px;
 top: -241px;
 left: 1588px;
@@ -7,6 +7,7 @@ padding: 0px 325px 0px 325px;
 gap: 0px;
 opacity: 0px;
 background-color: #F7F7F7;
+
 
 }
 .todolist_container{
@@ -18,7 +19,22 @@ opacity: 0px;
 display: flex;
 flex-direction: column;
 align-items: center;
-/* border: 1px solid black; */
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.todolist_body{
+    width: 750px;
+        height: 575px;
+        top: 135px;
+        gap: 0px;
+        opacity: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
 }
 
 .todolist_h1{
@@ -32,23 +48,19 @@ align-items: center;
     text-align: left;
 }
 
-.todolist_head{
-   
+.todolist_head{ 
     width: 750px;
     height: 135px;
     padding: 40px 0px 0px 0px;
-    gap: 18px;
-    
-    
+    gap: 18px;    
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-/* border: 1px solid red; */
+
 }
 
-.todolist_header{
-    
+.todolist_header{  
 width: 750px;
 height: 38px;
 gap: 16px;
@@ -66,7 +78,6 @@ gap: 436px;
 border-radius: 5px;
 border: 1px solid #6C63FF;
 opacity: 0px;
-
 display: flex;
 background-color: transparent;
 
@@ -85,11 +96,8 @@ width: 106px;
 height: 16px;
 gap: 0px;
 opacity: 0px;
-
 border: none;
 outline: none; 
-
-
 background-color: transparent;
 
 font-family: "Inter", sans-serif;
@@ -107,6 +115,48 @@ font-weight: 500;
 line-height: 16px;
 text-align: left;
 color: #C3C1E5;
-
 }
 
+.todolist_select-btn{
+    width: 93px;
+        height: 38px;
+        padding: 10px ;
+        gap: 10px;
+        border-radius: 5px;
+        background-color: #5850DD;
+        font-family: "Kanit", sans-serif;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+            color: #F7F7F7;
+      outline: none;
+}
+.option{
+    width: 81px;
+        height:67.2px;
+        gap: 8px;
+        background-color: #F7F7F7;
+        color: #6C63FF;
+        border: 1px solid #6C63FF;
+        border-radius: 5%;
+       
+}
+.todolist_select-btn option:hover{
+    color: #6C63FF;
+    background-color: #C3C1E5;
+
+}
+.todolist_actionBtn{
+    align-self: flex-end;
+    margin-bottom: 30px;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    background-color:#6C63FF;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+}

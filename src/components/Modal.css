@@ -54,19 +54,17 @@ justify-content: center;
 
 }
 .item:nth-child(2){
-    margin-bottom: 70px;
+    margin-bottom: 80px;
 }
 
 
 .container_modal-h2{
-   
-    width: 116px;
+ width: 116px;
 height: 24px;
 top: 136px;
 left: 645px;
 gap: 0px;
 opacity: 0px;
-
 font-family: "Kanit", sans-serif;
 font-size: 24px;
 font-weight: 500;
@@ -81,7 +79,6 @@ height: 38px;
 top: 185px;
 left: 480px;
 padding: 8px 16px 8px 16px;
-    
 border-radius: 5px;
 border: 1px solid #6C63FF;
 
@@ -101,40 +98,29 @@ height: 16px;
 gap: 0px;
 opacity: 0px;
 background-color: transparent;
-font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 16px;
-    text-align: left;
-    border: none;
-    outline: none;
+border: none;
+outline: none;
 font-family: "Inter", sans-serif;
         font-size: 16px;
         font-weight: 500;
         line-height: 16px;
         text-align: left;
         color: #C3C1E5;
-        
-    
 }
 
 .container_modal--input::placeholder {
-
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 16px;
     text-align: left;
     color: #C3C1E5;
-
 }
 .container_modal-buttons{
-    
-    width: 470px;
-    /* border: 1px solid black; */
+     width: 470px;
     display: flex;
     justify-content: space-between;
-    
+    align-self: stretch;
 }
 
 .container_modal--closeBtn{
