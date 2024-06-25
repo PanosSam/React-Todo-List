@@ -26,7 +26,7 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
            />
          </div>
          <div className="todolist_body">
-         <ul className="list">
+         <ul className="todo_list">
           {todos.length === 0 && <img src={Detective} alt="" />}
             {filteredTodos.map(todo => {
              return (
