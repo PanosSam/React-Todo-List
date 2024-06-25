@@ -10,6 +10,7 @@ background-color: #F7F7F7;
 
 
 }
+
 .todolist_container{
 width: 750px;
 height: 710px;
@@ -19,11 +20,11 @@ opacity: 0px;
 display: flex;
 flex-direction: column;
 align-items: center;
-
 display: flex;
 flex-direction: column;
 align-items: center;
 }
+
 .todolist_body{
     width: 750px;
         height: 575px;
@@ -205,40 +206,55 @@ color: #C3C1E5;
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
-
 }
 .todoItem:first-child{
     border-top: none;
 }
-
-.todoItem_label{
-    box-sizing: border-box;
-   /*  border: 1px solid red; */
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.todoItem_title{
+    border: 1px solid black;
+    
 }
+.todoItem_label{
+   display: inline-block;
+   position: relative;
+}
+
 .todoItem_label:hover{
     cursor: url("../assets/handcursor.svg"),auto;
 }
 
 .todoItem_buttons{
     display: flex;
-    /* border: 1px solid blue; */
+    
 }
 
 
 .todoItem_checkbox{
+position: absolute;
+height: 0;
+width: 0;
+}
+
+.checkmark{
+position: absolute;
 width: 26px;
 height: 26px;
-top: 120px;
-gap: 0px;
-border-radius: 2px 0px 0px 0px;
-border: 1px 0px 0px 0px;
+
+border-radius: 2px;
 border-color: #6C63FF;
 background-color: transparent;
- 
+outline: 1px solid #6C63FF;
+
 }
+
+.todoItem_label .todoItem_checkbox:checked ~ .checkmark{
+    background-color: #6C63FF;
+    background-image: url("../assets/tick.svg");
+    background-repeat: no-repeat ;
+    background-position: center;
+   
+} 
+
 .todoItem_checkbox:hover{
     cursor: url("../assets/handcursor.svg"),auto;
 }

@@ -3,16 +3,11 @@
     {
       "id": "1",
       "title": "panos",
-      "completed": false
+      "completed": true
     },
     {
       "id": "2",
       "title": "asdaddasdasdad",
-      "completed": false
-    },
-    {
-      "id": "3",
-      "title": "asdasdasda",
       "completed": false
     }
   ]
