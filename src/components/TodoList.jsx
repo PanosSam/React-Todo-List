@@ -11,7 +11,7 @@ import "./TodoList.css"
 
 export default function TodoList({ todos, toggleTodo, deleteTodo, 
     filteredTodos,setIsOpen,  searchTerm, 
-    setSearchTerm,filter,setFilter,lightMode, setLightMode
+    setSearchTerm,todoFilter,setFilter,lightMode, setLightMode
   }){
 
     return (
@@ -20,11 +20,11 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
           <h1 className={lightMode ? "todolist_h1": "todolist_h1_nightMode"}>TODO LIST</h1>
            <TodoHeader 
            setLightMode ={setLightMode}
-            lightMode={lightMode}
+           lightMode={lightMode}
            searchTerm={searchTerm} 
            setSearchTerm={setSearchTerm} 
-           filter={filter} 
            setFilter={setFilter}
+           todoFilter={todoFilter}
            />
          </div>
          <div className="todolist_body">

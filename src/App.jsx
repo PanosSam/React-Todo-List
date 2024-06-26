@@ -89,7 +89,8 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
 
     return (
       
-      <div className='container' >
+    <div className='container' >
+      <div className='frame'>
         <div className={lightMode ? "todolist" : "todolist_nightMode" }>
         <TodoList 
         setLightMode ={setLightMode}
@@ -114,6 +115,7 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
         onSubmit={addTodo}
         />
       </div>
+    </div>
     );
   };
   

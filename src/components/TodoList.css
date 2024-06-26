@@ -1,23 +1,28 @@
 .todolist{
-width: 1400px;
-height: 710px;
-top: -241px;
-left: 1588px;
-padding: 0px 325px 0px 325px;
-gap: 0px;
-opacity: 0px;
+    box-sizing: border-box;
+    width: 1046px;
+    height: 961px;
+    top: 94px;
+    gap: 0px;
+    opacity: 0px;
+box-shadow: rgba(0, 0, 0, 0.33);    
 background-color: #F7F7F7;
+display: flex;
+justify-content: center;
+align-items: center;
 
 }
 .todolist_nightMode{
-width: 1400px;
-height: 710px;
-top: -241px;
-left: 1588px;
-padding: 0px 325px 0px 325px;
-gap: 0px;
-opacity: 0px;
+    width: 1040px;
+    height: 956px;
+    left: 134px;
+    gap: 0px;
+    opacity: 0px;
+    
 background-color: rgba(37, 37, 37, 1);
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .todolist_container{
@@ -94,7 +99,7 @@ box-sizing: border-box;
 }
 
 .todolist_searchBar{
-  box-sizing: border-box;
+ box-sizing: border-box;
 width: 595px;
 height: 38px;
 padding: 8px 16px 8px 16px;
@@ -122,7 +127,7 @@ background-color: transparent;
 
 
 .todolist_searchBar-input{
-/* width: 106px; */
+width: 106px;
 height: 16px;
 border: none;
 outline: none; 
@@ -135,6 +140,7 @@ line-height: 16px;
 text-align: left;
 color:rgba(195, 193, 229, 1);
 }
+
 .todolist_searchBar-input_nightMode{
 width: 106px;
 height: 16px;
@@ -170,35 +176,6 @@ text-align: left;
 color: #666666;
 }
 
-.todolist_select-btn{
-    width: 93px;
-        height: 38px;
-        padding: 10px ;
-        gap: 10px;
-        border-radius: 5px;
-        background-color: #5850DD;
-        font-family: "Kanit", sans-serif;
-            font-weight: 400;
-            line-height: 18px;
-            text-align: left;
-            color: #F7F7F7;
-      outline: none;
-}
-.option{
-    width: 81px;
-        height:67.2px;
-        gap: 8px;
-        background-color: #F7F7F7;
-        color: #6C63FF;
-        border: 1px solid #6C63FF;
-        border-radius: 5%;
-       
-}
-.todolist_select-btn option:hover{
-    color: #6C63FF;
-    background-color: #C3C1E5;
-
-}
 .todolist_actionBtn{
     align-self: flex-end;
     margin-bottom: 30px;
@@ -350,11 +327,11 @@ text-align: left;
     text-decoration-skip-ink: none;
 }
 
-.todoItem_label{
+/* .todoItem_label{
    display: inline-block;
    position: relative;  
 }
-
+ */
 
 
 .todoItem_label:hover{
@@ -386,10 +363,12 @@ outline: 1px solid #6C63FF;
 }
 
 .todoItem_label .todoItem_checkbox:checked ~ .checkmark{
+   
     background-color: #6C63FF;
     background-image: url("../assets/tick.svg");
     background-repeat: no-repeat ;
-    background-position: center;
+    background-position:center;
+   
    
 } 
 

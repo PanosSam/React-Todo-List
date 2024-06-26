@@ -5,7 +5,7 @@ body{
 } 
 
 .container{ 
-    margin: auto;
+   margin: auto;
     width: 1664px;
     height: 1386px;
     top: -793px;
@@ -16,6 +16,18 @@ body{
 display: flex;
 justify-content: center;
 align-items: center;
+
+}
+.frame{
+/* border: 1px solid black; */
+width: 1174px;
+height: 1055px;
+top: 166px;
+left: 245px;
+gap: 0px;
+opacity: 0px;
+display: flex;
+
 
 }
 
