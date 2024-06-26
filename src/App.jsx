@@ -78,7 +78,7 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
 
   function onClose(){ //closes the modal and enables scrolling to the body.
     setIsOpen(false)
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'unset';
   }
   
   useEffect(() => {

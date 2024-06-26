@@ -17,7 +17,7 @@ left: 1588px;
 padding: 0px 325px 0px 325px;
 gap: 0px;
 opacity: 0px;
-background-color:#252525B2;
+background-color: rgba(37, 37, 37, 1);
 }
 
 .todolist_container{
@@ -60,6 +60,17 @@ align-items: center;
     line-height: 38.87px;
     text-align: left;
 }
+.todolist_h1_nightMode{
+    width: 122px;
+    height: 39px;
+   
+    font-family: "Kanit", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 38.87px;
+    text-align: left;
+    color: rgba(247, 247, 247, 1);
+}
 
 .todolist_head{ 
     width: 750px;
@@ -89,22 +100,42 @@ height: 38px;
 padding: 8px 16px 8px 16px;
 gap: 436px;
 border-radius: 5px;
-border: 1px solid #6C63FF;
+border: 1px solid rgba(108, 99, 255, 1);
 opacity: 0px;
 display: flex;
 background-color: transparent;
+}
 
+.todolist_searchBar_nightMode{
+    box-sizing: border-box;
+    width: 595px;
+    height: 38px;
+    padding: 8px 16px 8px 16px;
+    gap: 436px;
+    border-radius: 5px;
+    border: 1px solid #F7F7F7;
+    opacity: 0px;
+    display: flex;
+    background-color: transparent;
 
 }
-.todolist_searchBar-vector{
-width: 21px;
-height: 21px;
-gap: 0px;
-opacity: 0px;
-color: #6C63FF;
 
-}
+
 .todolist_searchBar-input{
+/* width: 106px; */
+height: 16px;
+border: none;
+outline: none; 
+background-color: transparent;
+
+font-family: "Inter", sans-serif;
+font-size: 16px;
+font-weight: 500;
+line-height: 16px;
+text-align: left;
+color:rgba(195, 193, 229, 1);
+}
+.todolist_searchBar-input_nightMode{
 width: 106px;
 height: 16px;
 gap: 0px;
@@ -118,7 +149,7 @@ font-size: 16px;
 font-weight: 500;
 line-height: 16px;
 text-align: left;
-color: #C3C1E5;
+color: #666666;
 }
 
 .todolist_searchBar-input::placeholder{
@@ -127,7 +158,16 @@ font-size: 16px;
 font-weight: 500;
 line-height: 16px;
 text-align: left;
-color: #C3C1E5;
+color:rgba(195, 193, 229, 1);
+}
+
+.todolist_searchBar-input_nightMode::placeholder{
+font-family: "Inter", sans-serif;
+font-size: 16px;
+font-weight: 500;
+line-height: 16px;
+text-align: left;
+color: #666666;
 }
 
 .todolist_select-btn{
@@ -238,6 +278,19 @@ line-height: 20px;
 text-align: left;
 }
 
+.todolist_empty_nightMode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+font-family: "Kanit", sans-serif;
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+    color: rgba(247, 247, 247, 1);
+}
+
 .todoItem_title{
 width: 420px;
 height: 20px;
@@ -248,8 +301,22 @@ font-size: 20px;
 font-weight: 500;
 line-height: 20px;
 text-align: left;
+color:black;
 }
 
+.todoItem_title_nightMode{
+width: 420px;
+height: 20px;
+margin-left: 15px;
+margin-top: 2px;
+
+font-family: "Kanit", sans-serif;
+font-size: 20px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color: #F7F7F7;
+}
 
 .todoItem_titleChecked{
 width: 420px;
@@ -262,6 +329,22 @@ font-weight: 500;
 line-height: 20px;
 text-align: left;
     color: #25252580;
+    text-decoration:underline;
+    text-underline-offset: -40%;
+    text-decoration-skip-ink: none;
+}
+
+.todoItem_titleChecked_nightMode{
+width: 420px;
+height: 20px;
+margin-left: 15px;
+margin-top: 2px;
+font-family: "Kanit", sans-serif;
+font-size: 20px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+    color:#FFFFFF80;
     text-decoration:underline;
     text-underline-offset: -40%;
     text-decoration-skip-ink: none;

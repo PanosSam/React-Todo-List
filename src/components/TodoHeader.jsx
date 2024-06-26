@@ -6,7 +6,7 @@ import ToggleLightMode from './ToggleLightMode.jsx'
 export default function TodoHeader({searchTerm, setSearchTerm, todoFilter, setFilter, lightMode, setLightMode}) {
   return (
     <div  className="todolist_header">
-        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} lightMode={lightMode} />
         <DropDownFilter todoFilter={todoFilter} setFilter={setFilter} />
         <ToggleLightMode setLightMode ={setLightMode} lightMode={lightMode} />
     </div>

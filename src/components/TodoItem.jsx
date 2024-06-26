@@ -1,10 +1,10 @@
 import trashcan from "../assets/trashcan.svg"
 import trashcanRed from "../assets/trashcanRed.svg"
-import pengrey from "..//assets/pengrey.svg"
+import pengrey from "../assets/pengrey.svg"
 import penpurple from "../assets/penpurple.svg"
 import { useState } from "react"
 
-export default function TodoItem({ completed, id, title, toggleTodo, deleteTodo }){
+export default function TodoItem({ completed, id, title, toggleTodo, deleteTodo,lightMode }){
 const [mouseOverDelete,setMouseoverDelete] =useState(true)
 const [mouseOverEdit, setMouseOverEdit] = useState(true)
 
@@ -28,7 +28,9 @@ function handleMouseOverEdit (){
              <span className="checkmark"></span>
         </label>
              
-            <div className={completed ? "todoItem_titleChecked" : "todoItem_title"}>
+            <div className={` ${completed ? "todoItem_titleChecked" : "todoItem_title"}
+                         ${completed && !lightMode ? "todoItem_titleChecked_nightMode" : ""}
+                         ${!completed && !lightMode ? "todoItem_title_nightMode" : ""}`}>
              {title}
             </div>
            

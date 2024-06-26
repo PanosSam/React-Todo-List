@@ -3,6 +3,7 @@ import TodoItem from "./TodoItem.jsx"
 import TodoHeader from "./TodoHeader";
 import TodoActions from "./TodoActions";
 import Detective from "../assets/Detective.png";
+import DedectiveNightmode from "../assets/DetectiveNightmode.svg"
 import "./TodoList.css"
 
 
@@ -10,15 +11,13 @@ import "./TodoList.css"
 
 export default function TodoList({ todos, toggleTodo, deleteTodo, 
     filteredTodos,setIsOpen,  searchTerm, 
-    setSearchTerm,
-    filter,
-    setFilter,lightMode, setLightMode
+    setSearchTerm,filter,setFilter,lightMode, setLightMode
   }){
 
     return (
         <div className="todolist_container">
           <div className="todolist_head">
-          <h1 className="todolist_h1">TODO LIST</h1>
+          <h1 className={lightMode ? "todolist_h1": "todolist_h1_nightMode"}>TODO LIST</h1>
            <TodoHeader 
            setLightMode ={setLightMode}
             lightMode={lightMode}
@@ -30,11 +29,19 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
          </div>
          <div className="todolist_body">
          <ul className="todo_list">
-          {todos.length === 0 && <div className="todolist_empty"> <img src={Detective} alt=""/> <span>Empty...</span> </div> }
+
+          {todos.length === 0 && <div className={lightMode ? "todolist_empty" : "todolist_empty_nightMode"}> 
+            <img src={lightMode ? Detective : DedectiveNightmode} alt=""/> 
+            <span >Empty...</span> </div> }
+
             {filteredTodos.map(todo => {
              return (
             <TodoItem {...todo} key={todo.id} 
-            toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+            toggleTodo={toggleTodo} 
+            deleteTodo={deleteTodo} 
+            setLightMode ={setLightMode}
+            lightMode={lightMode}
+            />
          )
           })}
          </ul>

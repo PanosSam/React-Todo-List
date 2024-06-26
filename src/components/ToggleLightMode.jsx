@@ -1,6 +1,10 @@
-import React,{ useState } from 'react'
+import React from 'react'
+import moon from "../assets/moon.svg"
+import sun from  "../assets/sun.svg"
+import "./ToggleLightMode.css"
 
-export default function ToggleLightMode({ setLightMode}) {
+
+export default function ToggleLightMode({ lightMode, setLightMode}) {
 
 
 function handleLightMode(){
@@ -10,11 +14,12 @@ function handleLightMode(){
   return (
     <div>
 
-        <button 
+        <div
         className='todolist_lightModeBtn'
         onClick={handleLightMode}
-       
-        >NM</button>
+        >
+          <img src={lightMode ? moon : sun} alt="" />
+        </div>
       
     </div>
   )
