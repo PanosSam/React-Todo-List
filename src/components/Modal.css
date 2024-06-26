@@ -1,6 +1,6 @@
 
 .container_modal {
-box-sizing: border-box;
+
 position: fixed;
 
     top: 0;
@@ -35,7 +35,7 @@ position: fixed;
 }
 
 .container_modal2{
-box-sizing: border-box;
+
 width: 500px;
 height: 289px;
 top: 118px;
@@ -44,33 +44,63 @@ gap: 0px;
 border-radius: 16px;
 opacity: 0px;
 border-radius: 16px;
-border: 1px solid #6C63FF;
+
 background-color: #F7F7F7;
 
 display: flex;
 flex-wrap: wrap;
 align-items: center;
 justify-content: center;
-
 }
+.container_modal2_nightMode{
+width: 500px;
+height: 289px;
+top: 118px;
+left: 450px;
+gap: 0px;
+border-radius: 16px;
+opacity: 0px;
+border-radius: 16px;
+border: 1px solid #F7F7F7;
+background-color: #252525;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+
+
 .item:nth-child(2){
     margin-bottom: 80px;
 }
 
 
+
+
+
 .container_modal-h2{
  width: 116px;
 height: 24px;
-top: 136px;
-left: 645px;
-gap: 0px;
-opacity: 0px;
+margin-top: -2px;
+
 font-family: "Kanit", sans-serif;
 font-size: 24px;
 font-weight: 500;
 line-height: 24px;
 text-align: left;
- color: black;
+color:#252525;
+}
+.item_container_modal-h2_nighMode{
+width: 116px;
+height: 24px;
+margin-top: -2px;
+font-family: "Kanit", sans-serif;
+font-size: 24px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+color: #F7F7F7;
+
 }
 
 .container_modal--inputBar{
@@ -78,9 +108,10 @@ width: 440px;
 height: 38px;
 top: 185px;
 left: 480px;
-padding: 8px 16px 8px 16px;
+padding: 4px 8px 4px 8px;
 border-radius: 5px;
 border: 1px solid #6C63FF;
+margin-top: -30px;
 
 font-family: "Inter", sans-serif;
 font-size: 16px;
@@ -88,6 +119,25 @@ font-weight: 500;
 line-height: 16px;
 text-align: left;
 color: #C3C1E5;
+display: flex;
+align-items: center;
+}
+.container_modal--inputBar_nightMode{
+width: 440px;
+height: 38px;
+top: 185px;
+left: 480px;
+padding: 4px 8px 4px 8px;
+border-radius: 5px;
+border: 1px solid #F7F7F7;
+margin-top: -30px;
+
+font-family: "Inter", sans-serif;
+font-size: 16px;
+font-weight: 500;
+line-height: 16px;
+text-align: left;
+color: #666666;
 display: flex;
 align-items: center;
 }
@@ -107,6 +157,21 @@ font-family: "Inter", sans-serif;
         text-align: left;
         color: #C3C1E5;
 }
+.container_modal--input_nightMode{
+width: 130px;
+height: 16px;
+gap: 0px;
+opacity: 0px;
+background-color: transparent;
+border: none;
+outline: none;
+font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        text-align: left;
+        color:#666666;
+}
 
 .container_modal--input::placeholder {
     font-family: "Inter", sans-serif;
@@ -118,9 +183,11 @@ font-family: "Inter", sans-serif;
 }
 .container_modal-buttons{
      width: 470px;
+
     display: flex;
-    justify-content: space-between;
-    align-self: stretch;
+    justify-content: center;
+    gap: 240px;
+    
 }
 
 .container_modal--closeBtn{
@@ -135,7 +202,7 @@ font-family: "Inter", sans-serif;
     opacity: 0px;
     padding: 10px, 22px, 10px, 22px;
     color: #6C63FF;
-    background-color: #F7F7F7;
+    background-color:transparent;
 
     font-family: "Kanit", sans-serif;
     

@@ -26,9 +26,9 @@ function handleMouseOverEdit (){
             onChange ={e =>toggleTodo(id, e.target.checked)}
             />
              <span className="checkmark"></span>
-             </label>
+        </label>
              
-            <div className="todoItem_title">
+            <div className={completed ? "todoItem_titleChecked" : "todoItem_title"}>
              {title}
             </div>
            

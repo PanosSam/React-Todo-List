@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "./Modal.css";
 
-export default  function TodoInput({title,setTitle,handle}) {
+export default  function TodoInput({title,setTitle,handle,lightMode}) {
   
   const inputRef = useRef(null);
 
@@ -12,8 +12,12 @@ export default  function TodoInput({title,setTitle,handle}) {
   };
 
   return (
-    <div className='item container_modal--inputBar' onClick={handleContainerClick}>
-     <input className='container_modal--input'
+    <div className={lightMode ? 'item container_modal--inputBar'
+     : "item container_modal--inputBar_nightMode"} 
+     onClick={handleContainerClick}>
+     <input 
+     className={lightMode ? 'container_modal--input' 
+      : "container_modal--input_nightMode"}
       type="text"
       value={title}
       onChange={(e) => setTitle(e.target.value) }

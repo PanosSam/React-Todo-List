@@ -11,7 +11,8 @@ function App() {
   const [todos,setTodos] =useState([]); //This state is used for setting the todos.
   const [searchTerm, setSearchTerm] = useState(""); //This state is used for the search bar.
   const [todoFilter, setFilter] = useState("ALL") //This state is used for the select-filtering button.
-  
+  const [lightMode, setLightMode]=useState(true); // This state is used for the lightmode.
+
   const filteredTodos =  //this function is used to filter and update the todolist.
      todos
      .filter(todo => { 
@@ -74,6 +75,11 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
       });
     });
   }
+
+  function onClose(){ //closes the modal and enables scrolling to the body.
+    setIsOpen(false)
+    document.body.style.overflow = 'auto';
+  }
   
   useEffect(() => {
     fetch('http://localhost:3000/todos')
@@ -83,9 +89,11 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
 
     return (
       
-      <div className='container'>
-        <div className="todolist">
+      <div className='container' >
+        <div className={lightMode ? "todolist" : "todolist_nightMode" }>
         <TodoList 
+        setLightMode ={setLightMode}
+         lightMode={lightMode}
         filteredTodos={filteredTodos}
         todos={todos} 
         toggleTodo={toggleCompleted} 
@@ -99,9 +107,10 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
         </div>
         
         <Modal 
-        /* className={container_modal} */
-        open={isOpen} 
-        onClose={()=>setIsOpen(false)}  
+        setLightMode ={setLightMode}
+        lightMode={lightMode}
+        isOpen={isOpen} 
+        onClose={onClose}  
         onSubmit={addTodo}
         />
       </div>
