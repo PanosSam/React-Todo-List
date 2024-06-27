@@ -25,7 +25,8 @@ import "./DropdownFilter.css"
       "todolist_filter-btn"} 
        onClick={handleClick}>
       {todoFilter.toUpperCase()} <img src={openFilter ? dropup : dropdown} alt="" /></button>
-        <div className="todolist_filterdropdown" style={{ opacity: openFilter ? '1' : '0' }}>
+        <div className="todolist_filterdropdown" 
+          style={{ opacity: openFilter ? '1' : '0', zIndex: openFilter ? "2": "0"}}>
           <div className="option" value="all"  onClick={() => handleOptionClick('all')}>All</div>
           <div className="option" value="completed" onClick={() => handleOptionClick('completed')} >Completed</div>
           <div className="option" value="incomplete" onClick={() => handleOptionClick('incomplete')}>Incomplete</div>

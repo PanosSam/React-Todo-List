@@ -5,10 +5,10 @@ import penpurple from "../assets/penpurple.svg"
 import { useState } from "react"
 
 export default function TodoItem({ completed, id, title, toggleTodo, deleteTodo,lightMode }){
-const [mouseOverDelete,setMouseoverDelete] =useState(true)
-const [mouseOverEdit, setMouseOverEdit] = useState(true)
+const [mouseOverDelete,setMouseoverDelete] =useState(true) // Both states are used in order to execute a custom hover
+const [mouseOverEdit, setMouseOverEdit] = useState(true) //effect so we can swap between edit and delete images.
 
- function handleMouseOverDelete() {
+ function handleMouseOverDelete() { 
     setMouseoverDelete(mouse => !mouse)
 }
 
@@ -20,12 +20,12 @@ function handleMouseOverEdit (){
     <li className="todoItem" >
         <label className="todoItem_label">
             <input 
-            className="todoItem_checkbox"
+            className={lightMode ? "todoItem_checkbox" : "todoItem_checkbox_nightMode"}
             type="checkbox" 
             checked={completed} 
             onChange ={e =>toggleTodo(id, e.target.checked)}
             />
-             <span className="checkmark"></span>
+             <span className={lightMode ? "checkmark" : "checkmark_nightMode"}></span>
         </label>
              
             <div className={` ${completed ? "todoItem_titleChecked" : "todoItem_title"}

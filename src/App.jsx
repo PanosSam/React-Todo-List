@@ -91,7 +91,7 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
       
     <div className='container' >
       <div className='frame'>
-        <div className={lightMode ? "todolist" : "todolist_nightMode" }>
+        <div className={lightMode ? "todolist light-mode-cursor" : "todolist_nightMode night-mode-cursor" }>
         <TodoList 
         setLightMode ={setLightMode}
          lightMode={lightMode}

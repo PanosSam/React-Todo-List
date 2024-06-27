@@ -1,7 +1,7 @@
 import addbutton from "../assets/addbutton.png"
 
 
-export default function TodoActions({setIsOpen}) {
+export default function TodoActions({setIsOpen, lightMode}) {
 
   
   function handleClick(){
@@ -14,7 +14,7 @@ export default function TodoActions({setIsOpen}) {
     
    
       <button
-        className="todolist_actionBtn"
+        className={lightMode ? "todolist_actionBtn": "todolist_actionBtn_nightMode"}
         onClick={handleClick}>
         <img src={addbutton} alt="" ></img> 
       </button>

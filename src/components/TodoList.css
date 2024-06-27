@@ -1,3 +1,4 @@
+
 .todolist{
     box-sizing: border-box;
     width: 1046px;
@@ -12,17 +13,25 @@ justify-content: center;
 align-items: center;
 
 }
+
+.light-mode-cursor{
+    cursor: url("../assets/handcursor.svg"),auto;
+}
+
 .todolist_nightMode{
     width: 1040px;
     height: 956px;
     left: 134px;
     gap: 0px;
     opacity: 0px;
-    
 background-color: rgba(37, 37, 37, 1);
 display: flex;
 justify-content: center;
 align-items: center;
+}
+
+.night-mode-cursor{
+    cursor: url("../assets/handcursorwhite.svg"),auto;
 }
 
 .todolist_container{
@@ -40,6 +49,9 @@ align-items: center;
 
 }
 
+
+
+
 .todolist_body{
     width: 750px;
         height: 575px;
@@ -51,9 +63,20 @@ align-items: center;
         align-items: center;
         justify-content: space-between;
 }
-.todolist_body:hover{
-    cursor: url("../assets/handcursor.svg"),auto;
+
+.todolist_body_nightMode{
+    width: 750px;
+        height: 575px;
+        top: 135px;
+        gap: 0px;
+        opacity: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
 }
+
+
 
 .todolist_h1{
     width: 122px;
@@ -190,10 +213,28 @@ color: #666666;
     align-items: center;
         
 }
+.todolist_actionBtn_nightMode{
+    align-self: flex-end;
+    margin-bottom: 30px;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    background-color:#6C63FF;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+}
 .todolist_actionBtn:hover {
     background-color: #534CC2;
-    cursor: url("../assets/handcursor.svg"),auto;
+   
+}
 
+.todolist_actionBtn_nightMode:hover {
+    background-color: #534CC2;
+    
 }
 
 
@@ -209,9 +250,7 @@ color: #666666;
    
 }
 
-.todoItem_deleteBtn-img:hover{
- cursor: url("../assets/handcursor.svg"),auto;
-}
+
 
 .todoItem_editBtn{
     width: 18px;
@@ -224,10 +263,7 @@ color: #666666;
     align-items: center;
 }
 
-.todoItem_editBtn:hover {
-    cursor: url("../assets/handcursor.svg"),auto;
-} 
- 
+
 .todoItem{
     width: 525px;
     height: 26px;
@@ -237,6 +273,7 @@ color: #666666;
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
+z-index: 1;
 }
 
 .todoItem:first-child{
@@ -327,16 +364,14 @@ text-align: left;
     text-decoration-skip-ink: none;
 }
 
-/* .todoItem_label{
+.todoItem_label{
    display: inline-block;
    position: relative;  
 }
- */
 
 
-.todoItem_label:hover{
-    cursor: url("../assets/handcursor.svg"),auto;
-}
+
+
 
 .todoItem_buttons{
     display: flex;
@@ -345,6 +380,11 @@ text-align: left;
 
 
 .todoItem_checkbox{
+position: absolute;
+height: 0;
+width: 0;
+}
+.todoItem_checkbox_nightMode{
 position: absolute;
 height: 0;
 width: 0;
@@ -359,7 +399,16 @@ border-radius: 2px;
 border-color: #6C63FF;
 background-color: transparent;
 outline: 1px solid #6C63FF;
+}
+.checkmark_nightMode{
+position: absolute;
+width: 26px;
+height: 26px;
 
+border-radius: 2px;
+border-color: #6C63FF;
+background-color: transparent;
+outline: 1px solid #6C63FF;
 }
 
 .todoItem_label .todoItem_checkbox:checked ~ .checkmark{
@@ -368,13 +417,15 @@ outline: 1px solid #6C63FF;
     background-image: url("../assets/tick.svg");
     background-repeat: no-repeat ;
     background-position:center;
+} 
+.todoItem_label .todoItem_checkbox_nightMode:checked ~ .checkmark_nightMode{
    
-   
+    background-color: #6C63FF;
+    background-image: url("../assets/tick.svg");
+    background-repeat: no-repeat ;
+    background-position:center;
 } 
 
-.todoItem_checkbox:hover{
-    cursor: url("../assets/handcursor.svg"),auto;
-}
 
 .todo_list{
     display: flex;
