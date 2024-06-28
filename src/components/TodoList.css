@@ -211,7 +211,7 @@ color: #666666;
     display: flex;
     justify-content: center;
     align-items: center;
-        
+    cursor: url("../assets/handcursor.svg"),auto;
 }
 .todolist_actionBtn_nightMode{
     align-self: flex-end;
@@ -225,10 +225,11 @@ color: #666666;
     display: flex;
     justify-content: center;
     align-items: center;
-        
+    cursor: url("../assets/handcursorwhite.svg"),auto;
 }
 .todolist_actionBtn:hover {
     background-color: #534CC2;
+    
    
 }
 
@@ -237,11 +238,22 @@ color: #666666;
     
 }
 
+.todoItem_buttons{
+position: relative;
+width:62px;
+height: 18px;
+gap: 10px;
+display: none;
+cursor: url("..assets/handcursor.svg"), auto;
+}
+
+
+
 
 .todoItem_deleteBtn{
-    width: 18px;
-    height: 18px;
-    border: none;
+    width: 25px;
+    height: 25px;
+    border:none;
     outline: none;
     background-color: transparent;
     display: flex;
@@ -250,17 +262,24 @@ color: #666666;
    
 }
 
+.todoItem:hover .todoItem_buttons{
+    display: flex;
+    justify-content: center;
+}
+
 
 
 .todoItem_editBtn{
-    width: 18px;
-    height: 18px;
+    margin-top: 3px;
+    width: 20px;
+    height: 19px;
     border: none;
     outline: none;
     background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 
@@ -269,11 +288,12 @@ color: #666666;
     height: 26px;
     border-top:1px solid #5850DD;
     padding-top: 15px;
-   
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
+    display: flex;
+    gap: 20px;
+
 z-index: 1;
+
+
 }
 
 .todoItem:first-child{
@@ -306,6 +326,7 @@ text-align: left;
 }
 
 .todoItem_title{
+
 width: 420px;
 height: 20px;
 margin-left: 15px;
@@ -316,6 +337,8 @@ font-weight: 500;
 line-height: 20px;
 text-align: left;
 color:black;
+
+
 }
 
 .todoItem_title_nightMode{
@@ -365,18 +388,18 @@ text-align: left;
 }
 
 .todoItem_label{
-   display: inline-block;
-   position: relative;  
-}
-
-
-
-
-
-.todoItem_buttons{
     display: flex;
-    
+  justify-content: space-between;
 }
+.todoItem_label:hover{
+    cursor: url("../assets/handcursor.svg"),auto;
+}
+
+
+
+
+
+
 
 
 .todoItem_checkbox{

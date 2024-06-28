@@ -8,10 +8,8 @@ flex-direction:column;
 }
 
 .todolist_filter-btn{
-
 width: 100px;
 height:38px;
-
 border-radius: 5px;
 background-color:rgba(108, 99, 255, 1);
 display: flex;
@@ -19,6 +17,24 @@ justify-content: space-between;
 align-items: center;
 color: rgba(247, 247, 247, 1);
 
+font-family: "Kanit", sans-serif;
+font-size: 13px;
+font-weight: 500;
+line-height: 18px;
+text-align: left;
+border:  2px solid rgba(108, 99, 255, 1);
+cursor: url("../assets/handcursor.svg"),auto;
+}
+
+.todolist_filter-btn_nightMode{
+width: 100px;
+height:38px;
+border-radius: 5px;
+background-color:rgba(108, 99, 255, 1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: rgba(247, 247, 247, 1);
 font-family: "Kanit", sans-serif;
 font-size: 13px;
 font-weight: 500;
@@ -48,29 +64,29 @@ text-align: left;
 
 }
 
-.todolist_filter-btn:hover{
+.todolist_filter-btn:hover {
     background-color: rgba(88, 80, 221, 1);
+}
+
+.todolist_filter-btn_nightMode:hover{
+    background-color: rgba(88, 80, 221, 1);
+
 }
 
 .todolist_filterdropdown{
 width: 95px;
 height: 84px;
-
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 border-radius: 5px;
 border: 1px solid rgba(108, 99, 255, 1);
 background-color: white;
-
 display: flex;
 flex-direction: column;
 align-items: center;
-
-
 transition: opacity 200ms ease-in-out;
 }
 
 .option {
-
 box-sizing: border-box;
 width: 95px;
 height: 24px;
@@ -91,7 +107,7 @@ align-items: center;
 
 .option:hover{
     
-    background-color: #C3C1E5;
+background-color: #C3C1E5;
 
 }
 

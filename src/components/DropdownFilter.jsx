@@ -5,7 +5,7 @@ import "./DropdownFilter.css"
 
 
 
-  export default function DropDownFilter({ todoFilter, setFilter } ){
+  export default function DropDownFilter({ todoFilter, setFilter,lightMode } ){
    const [openFilter, setOpenFilter] = useState(false)
 
     
@@ -21,8 +21,8 @@ import "./DropdownFilter.css"
 
   return (
     <div className="dropdownWrapper">
-      <button className={openFilter ? "todolist_filter-btn_open" : 
-      "todolist_filter-btn"} 
+      <button className={`${openFilter ? "todolist_filter-btn_open" : 
+      "todolist_filter-btn"}`} 
        onClick={handleClick}>
       {todoFilter.toUpperCase()} <img src={openFilter ? dropup : dropdown} alt="" /></button>
         <div className="todolist_filterdropdown" 

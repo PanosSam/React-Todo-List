@@ -17,7 +17,7 @@ function handleMouseOverEdit (){
 }
 
     return (
-    <li className="todoItem" >
+    <li className="todoItem">
         <label className="todoItem_label">
             <input 
             className={lightMode ? "todoItem_checkbox" : "todoItem_checkbox_nightMode"}
