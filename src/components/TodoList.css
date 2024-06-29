@@ -162,6 +162,7 @@ font-weight: 500;
 line-height: 16px;
 text-align: left;
 color:rgba(195, 193, 229, 1);
+
 }
 
 .todolist_searchBar-input_nightMode{
@@ -212,6 +213,7 @@ color: #666666;
     justify-content: center;
     align-items: center;
     cursor: url("../assets/handcursor.svg"),auto;
+    outline: none;
 }
 .todolist_actionBtn_nightMode{
     align-self: flex-end;
@@ -226,7 +228,9 @@ color: #666666;
     justify-content: center;
     align-items: center;
     cursor: url("../assets/handcursorwhite.svg"),auto;
+    outline: none;
 }
+
 .todolist_actionBtn:hover {
     background-color: #534CC2;
     
@@ -259,12 +263,14 @@ cursor: url("..assets/handcursor.svg"), auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    
 }
+
 
 .todoItem:hover .todoItem_buttons{
     display: flex;
     justify-content: center;
+    
 }
 
 
@@ -290,8 +296,7 @@ cursor: url("..assets/handcursor.svg"), auto;
     padding-top: 15px;
     display: flex;
     gap: 20px;
-
-z-index: 1;
+    z-index: 1;
 
 
 }
@@ -417,21 +422,21 @@ width: 0;
 position: absolute;
 width: 26px;
 height: 26px;
-
 border-radius: 2px;
 border-color: #6C63FF;
 background-color: transparent;
 outline: 1px solid #6C63FF;
 }
+
 .checkmark_nightMode{
 position: absolute;
 width: 26px;
 height: 26px;
-
 border-radius: 2px;
 border-color: #6C63FF;
 background-color: transparent;
 outline: 1px solid #6C63FF;
+cursor: url("../assets/handcursorwhite.svg"),auto;
 }
 
 .todoItem_label .todoItem_checkbox:checked ~ .checkmark{

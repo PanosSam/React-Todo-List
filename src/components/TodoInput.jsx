@@ -13,11 +13,11 @@ export default  function TodoInput({title,setTitle,handle,lightMode}) {
 
   return (
     <div className={lightMode ? 'item container_modal--inputBar'
-     : "item container_modal--inputBar_nightMode"} 
+     : "container_modal--inputBar_nightMode"} 
      onClick={handleContainerClick}>
      <input 
-     className={lightMode ? 'container_modal--input' 
-      : "container_modal--input_nightMode"}
+     className={lightMode ? 'item container_modal--input' 
+      : "item container_modal--input_nightMode"}
       type="text"
       value={title}
       onChange={(e) => setTitle(e.target.value) }
