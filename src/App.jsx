@@ -13,13 +13,12 @@ function App() {
   const [todoFilter, setFilter] = useState("ALL") //This state is used for the select-filtering button.
   const [lightMode, setLightMode]=useState(true); // This state is used for the lightmode.
 
-  const filteredTodos =  //this function is used to filter and update the todolist.
+  const filteredTodos =  //this function is used to filter and update the todolist wether is complete or by chars or both.
      todos
      .filter(todo => { 
       // with this filter the user inputs a search term wich is run through the todo list and shows the updated results
     return todo.title.toLowerCase().includes(searchTerm.toLowerCase())
    })
-
    .filter(todo => { 
     // this filter goes through the todo list and renders the result of comleteness depending on the selected filter.
     if (todoFilter === "completed") {
@@ -75,11 +74,26 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
       });
     });
   }
+  function editTodo(id,title){
+    fetch(`http://localhost:3000/todos/${id}`, {
+      method: `PUT`,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({title})
+    })
+    .then(response=> response.json())
+    .then(updatedTodo => {
+      const updatedTodos = todos.map(todo =>
+        todo.id === id ? { ...todo, title: updatedTodo.title }: todo
+      );
+      setTodos(updatedTodos);
+    })
+    
+  }
 
   function onClose(){ //closes the modal and enables scrolling to the body.
-    
     setIsOpen(false)
-    document.body.style.overflow = 'unset';
   }
   
   useEffect(() => {
@@ -91,12 +105,12 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
     return (
       
     <div className='container' >
-      <div className='frame'>
+      {/* <div className='frame'> */}
         <div className={lightMode ? "todolist light-mode-cursor" :
            "todolist_nightMode night-mode-cursor" }>
         <TodoList 
         setLightMode ={setLightMode}
-         lightMode={lightMode}
+        lightMode={lightMode}
         filteredTodos={filteredTodos}
         todos={todos} 
         toggleTodo={toggleCompleted} 
@@ -106,18 +120,18 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
         setSearchTerm={setSearchTerm} 
         todoFilter={todoFilter} 
         setFilter={setFilter}
+        editTodo={editTodo}
         />
         </div>
-        
         <Modal 
-        
         setLightMode ={setLightMode}
         lightMode={lightMode}
         isOpen={isOpen} 
         onClose={onClose}  
         onSubmit={addTodo}
         />
-      </div>
+        
+      {/* </div> */}
     </div>
     );
   };

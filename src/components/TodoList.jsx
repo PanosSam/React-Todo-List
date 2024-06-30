@@ -11,7 +11,7 @@ import "./TodoList.css"
 
 export default function TodoList({ todos, toggleTodo, deleteTodo, 
     filteredTodos,setIsOpen,  searchTerm, 
-    setSearchTerm,todoFilter, setFilter, lightMode, setLightMode
+    setSearchTerm,todoFilter, setFilter, lightMode, setLightMode,editTodo
   }){
 
     return (
@@ -36,11 +36,14 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
 
             {filteredTodos.map(todo => {
              return (
-            <TodoItem {...todo} key={todo.id} 
+            <TodoItem 
+            {...todo} 
+            key={todo.id} 
             toggleTodo={toggleTodo} 
             deleteTodo={deleteTodo} 
             setLightMode ={setLightMode}
             lightMode={lightMode}
+            editTodo={editTodo}
             />
          )
           })}

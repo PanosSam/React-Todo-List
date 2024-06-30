@@ -11,7 +11,6 @@ background-color: #F7F7F7;
 display: flex;
 justify-content: center;
 align-items: center;
-
 }
 
 .light-mode-cursor{
@@ -35,25 +34,18 @@ align-items: center;
 }
 
 .todolist_container{
-width: 750px;
-height: 710px;
+max-width: 750px;
+max-height: 710px;
 left: 325px;
 gap: 0px;
 opacity: 0px;
 display: flex;
 flex-direction: column;
 align-items: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-
 }
 
-
-
-
 .todolist_body{
-    width: 750px;
+    max-width: 750px;
         height: 575px;
         top: 135px;
         gap: 0px;
@@ -76,22 +68,19 @@ align-items: center;
         justify-content: space-between;
 }
 
-
-
 .todolist_h1{
     width: 122px;
     height: 39px;
-   
     font-family: "Kanit", sans-serif;
     font-size: 26px;
     font-weight: 500;
     line-height: 38.87px;
     text-align: left;
 }
+
 .todolist_h1_nightMode{
     width: 122px;
     height: 39px;
-   
     font-family: "Kanit", sans-serif;
     font-size: 26px;
     font-weight: 500;
@@ -101,7 +90,7 @@ align-items: center;
 }
 
 .todolist_head{ 
-    width: 750px;
+    max-width: 750px;
     height: 135px;
     padding: 40px 0px 0px 0px;
     gap: 18px;    
@@ -109,7 +98,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-
 }
 
 .todolist_header{  
@@ -145,9 +133,7 @@ background-color: transparent;
     opacity: 0px;
     display: flex;
     background-color: transparent;
-
 }
-
 
 .todolist_searchBar-input{
 width: 106px;
@@ -155,14 +141,12 @@ height: 16px;
 border: none;
 outline: none; 
 background-color: transparent;
-
 font-family: "Inter", sans-serif;
 font-size: 16px;
 font-weight: 500;
 line-height: 16px;
 text-align: left;
 color:rgba(195, 193, 229, 1);
-
 }
 
 .todolist_searchBar-input_nightMode{
@@ -173,7 +157,6 @@ opacity: 0px;
 border: none;
 outline: none; 
 background-color: transparent;
-
 font-family: "Inter", sans-serif;
 font-size: 16px;
 font-weight: 500;
@@ -233,13 +216,10 @@ color: #666666;
 
 .todolist_actionBtn:hover {
     background-color: #534CC2;
-    
-   
 }
 
 .todolist_actionBtn_nightMode:hover {
     background-color: #534CC2;
-    
 }
 
 .todoItem_buttons{
@@ -251,9 +231,6 @@ display: none;
 cursor: url("..assets/handcursor.svg"), auto;
 }
 
-
-
-
 .todoItem_deleteBtn{
     width: 25px;
     height: 25px;
@@ -263,17 +240,12 @@ cursor: url("..assets/handcursor.svg"), auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
-
 
 .todoItem:hover .todoItem_buttons{
     display: flex;
     justify-content: center;
-    
 }
-
-
 
 .todoItem_editBtn{
     margin-top: 3px;
@@ -285,9 +257,72 @@ cursor: url("..assets/handcursor.svg"), auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
+.todoItem_editInput{
+    
+    width: 420px;
+    height: 20px;
+    font-family: "Kanit", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color:black;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.todoItem_editInput_nightMode{
+    width: 420px;
+    height: 20px;
+    font-family: "Kanit", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #F7F7F7;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.todoItem_editSave{
+width: 100px;
+height:38px;
+border-radius: 5px;
+background-color:rgba(108, 99, 255, 1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: rgba(247, 247, 247, 1);
+font-family: "Kanit", sans-serif;
+font-size: 13px;
+font-weight: 500;
+line-height: 18px;
+text-align: left;
+border:  2px solid rgba(108, 99, 255, 1);
+cursor: url("../assets/handcursor.svg"),auto;
+}
+
+.todoItem_cancelSave{
+width: 100px;
+height:38px;
+border-radius: 5px;
+background-color:rgba(108, 99, 255, 1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: rgba(247, 247, 247, 1);
+font-family: "Kanit", sans-serif;
+font-size: 13px;
+font-weight: 500;
+line-height: 18px;
+text-align: left;
+border:  2px solid rgba(108, 99, 255, 1);
+cursor: url("../assets/handcursor.svg"),auto;
+}
 
 .todoItem{
     width: 525px;
@@ -297,8 +332,6 @@ cursor: url("..assets/handcursor.svg"), auto;
     display: flex;
     gap: 20px;
     z-index: 1;
-
-
 }
 
 .todoItem:first-child{
@@ -318,20 +351,19 @@ text-align: left;
 }
 
 .todolist_empty_nightMode{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
 font-family: "Kanit", sans-serif;
 font-size: 20px;
 font-weight: 400;
 line-height: 20px;
 text-align: left;
-    color: rgba(247, 247, 247, 1);
+color: rgba(247, 247, 247, 1);
 }
 
 .todoItem_title{
-
 width: 420px;
 height: 20px;
 margin-left: 15px;
@@ -342,8 +374,6 @@ font-weight: 500;
 line-height: 20px;
 text-align: left;
 color:black;
-
-
 }
 
 .todoItem_title_nightMode{
@@ -351,7 +381,6 @@ width: 420px;
 height: 20px;
 margin-left: 15px;
 margin-top: 2px;
-
 font-family: "Kanit", sans-serif;
 font-size: 20px;
 font-weight: 500;
@@ -396,16 +425,10 @@ text-align: left;
     display: flex;
   justify-content: space-between;
 }
+
 .todoItem_label:hover{
     cursor: url("../assets/handcursor.svg"),auto;
 }
-
-
-
-
-
-
-
 
 .todoItem_checkbox{
 position: absolute;
@@ -446,6 +469,7 @@ cursor: url("../assets/handcursorwhite.svg"),auto;
     background-repeat: no-repeat ;
     background-position:center;
 } 
+
 .todoItem_label .todoItem_checkbox_nightMode:checked ~ .checkmark_nightMode{
    
     background-color: #6C63FF;
@@ -453,7 +477,6 @@ cursor: url("../assets/handcursorwhite.svg"),auto;
     background-repeat: no-repeat ;
     background-position:center;
 } 
-
 
 .todo_list{
     display: flex;

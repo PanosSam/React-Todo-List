@@ -6,7 +6,7 @@ body{
 
 .container{ 
    margin: auto;
-    width: 1664px;
+    max-width: 1664px;
     height: 1386px;
     top: -793px;
     left: -1066px;
@@ -19,8 +19,8 @@ align-items: center;
 
 
 }
-.frame{
-/* border: 1px solid black; */
+/* .frame{
+border: 1px solid black;
 width: 1174px;
 height: 1055px;
 top: 166px;
@@ -31,5 +31,5 @@ display: flex;
 
 
 }
-
+ */
 
