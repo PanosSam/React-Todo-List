@@ -35,7 +35,6 @@ position: fixed;
 }
 
 .container_modal2{
-
 width: 500px;
 height: 289px;
 top: 118px;
@@ -74,10 +73,6 @@ cursor: url("../assets/handcursorwhite.svg"),auto;
 .item:nth-child(2){
     margin-bottom: 80px;
 }
-
-
-
-
 
 .container_modal-h2{
  width: 116px;

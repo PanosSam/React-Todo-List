@@ -14,8 +14,6 @@ align-items: center;
 @media (max-width:900px){
     .todolist_lightModeBtn{
         display: flex;
-       
-        
     }
 }
 

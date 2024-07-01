@@ -12,10 +12,12 @@ align-items: center;
 
 @media (max-width:900px){
     .todolist{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
     }
+   
 }
 
 .light-mode-cursor{
@@ -23,15 +25,21 @@ align-items: center;
 }
 
 .todolist_nightMode{
-    width: 1040px;
-    height: 956px;
-    left: 134px;
-    gap: 0px;
-    opacity: 0px;
+    min-width: 1046px;
+    height: 961px;
 background-color: rgba(37, 37, 37, 1);
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content:center;
+align-items:center;
+}
+
+@media (max-width:900px){
+    .todolist_nightMode{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .night-mode-cursor{
@@ -40,13 +48,16 @@ align-items: center;
 
 .todolist_container{
 max-width: 100%;
-max-height: 710px;
-left: 325px;
-gap: 0px;
-opacity: 0px;
+height: 710px;
 display: flex;
 flex-direction: column;
 align-items: center;
+}
+
+@media (max-width:750px) {
+    .todolist_container{
+        width: 100%;
+    }
 }
 
 
@@ -64,7 +75,7 @@ align-items: center;
 }
 
 .todolist_body_nightMode{
-    width: 750px;
+    max-width: 750px;
         height: 575px;
         top: 135px;
         gap: 0px;
@@ -124,25 +135,32 @@ box-sizing: border-box;
         flex-direction: column-reverse;
         align-items:flex-end;
     }
-
 }
 
 
 .todolist_searchBar{
-    position: relative;
- box-sizing: border-box;
-width: 100%;
+position: relative;
+box-sizing: border-box;
+width: 595px;
 height: 38px;
 padding: 8px 16px 8px 16px;
 gap: 436px;
 border-radius: 5px;
 border: 1px solid rgba(108, 99, 255, 1);
-opacity: 0px;
 display: flex;
+justify-content: flex-end;
 background-color: transparent;
 }
 
+@media (max-width: 800px){
+ .todolist_searchBar{
+    display: flex;
+    width: 400px;
+ }
+}
+
 .todolist_searchBar_nightMode{
+    position: relative;
     box-sizing: border-box;
     width: 595px;
     height: 38px;
@@ -152,11 +170,19 @@ background-color: transparent;
     border: 1px solid #F7F7F7;
     opacity: 0px;
     display: flex;
+    justify-content: flex-end;
     background-color: transparent;
 }
 
+@media (max-width: 800px){
+    .todolist_searchBar_nightMode{
+       display: flex;
+       width: 400px;
+    }
+   }
+
 .todolist_searchBar-input{
-max-width: 100%;
+width: 60%;
 height: 16px;
 border: none;
 outline: none; 
@@ -170,7 +196,7 @@ color:rgba(195, 193, 229, 1);
 }
 
 .todolist_searchBar-input_nightMode{
-width: 106px;
+width: 60%;
 height: 16px;
 gap: 0px;
 opacity: 0px;
@@ -203,14 +229,10 @@ text-align: left;
 color: #666666;
 }
 
-.todolist_searchBar-vector{
-    position: relative;
-}
 
 .todolist_actionBtn{
+    position: relative;
     align-self: flex-end;
-   /*  margin-bottom: 30px;
-    margin-right: 5px; */
     width: 50px;
     height: 50px;
     background-color:#6C63FF;
@@ -228,12 +250,12 @@ color: #666666;
         margin-right:5%;
        
     }
-
+    .todolist_actionBtn_nightMode{
+        margin-right:5%;
+    }
 }
 .todolist_actionBtn_nightMode{
     align-self: flex-end;
-    margin-bottom: 30px;
-    margin-right: 5px;
     width: 50px;
     height: 50px;
     background-color:#6C63FF;
@@ -261,6 +283,12 @@ height: 18px;
 gap: 10px;
 display: none;
 cursor: url("..assets/handcursor.svg"), auto;
+}
+
+@media (max-width:900px){
+    .todoItem_buttons{
+        display: flex;
+    }
 }
 
 .todoItem_deleteBtn{
@@ -454,7 +482,7 @@ text-align: left;
 }
 
 .todoItem_label{
-    display: flex;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -463,18 +491,18 @@ text-align: left;
 }
 
 .todoItem_checkbox{
-position: absolute;
+/* position: absolute; */
 height: 0;
 width: 0;
 }
 .todoItem_checkbox_nightMode{
-position: absolute;
+/* position: absolute; */
 height: 0;
 width: 0;
 }
 
 .checkmark{
-position: absolute;
+/* position: absolute; */
 width: 26px;
 height: 26px;
 border-radius: 2px;
@@ -484,7 +512,7 @@ outline: 1px solid #6C63FF;
 }
 
 .checkmark_nightMode{
-position: absolute;
+/* position: absolute; */
 width: 26px;
 height: 26px;
 border-radius: 2px;
@@ -511,7 +539,10 @@ cursor: url("../assets/handcursorwhite.svg"),auto;
 } 
 
 .todo_list{
+    width: 100%;
+    height: 465px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+   overflow: auto;
 }
