@@ -6,9 +6,17 @@ margin: 0;
 display: flex;
 flex-direction:column;
 }
+@media (max-width:900px){
+    .dropdownWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+       
+    }
+}
 
 .todolist_filter-btn{
-width: 100px;
+width: 100%;
 height:38px;
 border-radius: 5px;
 background-color:rgba(108, 99, 255, 1);
@@ -26,7 +34,7 @@ cursor: url("../assets/handcursor.svg"),auto;
 }
 
 .todolist_filter-btn_nightMode{
-width: 100px;
+width: 100%;
 height:38px;
 border-radius: 5px;
 background-color:rgba(108, 99, 255, 1);

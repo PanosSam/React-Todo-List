@@ -1,16 +1,21 @@
 
 .todolist{
     box-sizing: border-box;
-    width: 1046px;
+    min-width: 1046px;
     height: 961px;
-    top: 94px;
-    gap: 0px;
-    opacity: 0px;
 box-shadow: rgba(0, 0, 0, 0.33);    
 background-color: #F7F7F7;
 display: flex;
 justify-content: center;
 align-items: center;
+}
+
+@media (max-width:900px){
+    .todolist{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
 
 .light-mode-cursor{
@@ -34,7 +39,7 @@ align-items: center;
 }
 
 .todolist_container{
-max-width: 750px;
+max-width: 100%;
 max-height: 710px;
 left: 325px;
 gap: 0px;
@@ -43,6 +48,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
+
+
 
 .todolist_body{
     max-width: 750px;
@@ -90,7 +97,7 @@ align-items: center;
 }
 
 .todolist_head{ 
-    max-width: 750px;
+    max-width: 100%;
     height: 135px;
     padding: 40px 0px 0px 0px;
     gap: 18px;    
@@ -100,8 +107,9 @@ align-items: center;
 justify-content: center;
 }
 
+
 .todolist_header{  
-width: 750px;
+width: 100%;
 height: 38px;
 gap: 16px;
 opacity: 0px;
@@ -109,9 +117,21 @@ display: flex;
 box-sizing: border-box;
 }
 
+@media (max-width:900px){
+    .todolist_header{
+        margin-right:5%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items:flex-end;
+    }
+
+}
+
+
 .todolist_searchBar{
+    position: relative;
  box-sizing: border-box;
-width: 595px;
+width: 100%;
 height: 38px;
 padding: 8px 16px 8px 16px;
 gap: 436px;
@@ -136,7 +156,7 @@ background-color: transparent;
 }
 
 .todolist_searchBar-input{
-width: 106px;
+max-width: 100%;
 height: 16px;
 border: none;
 outline: none; 
@@ -183,10 +203,14 @@ text-align: left;
 color: #666666;
 }
 
+.todolist_searchBar-vector{
+    position: relative;
+}
+
 .todolist_actionBtn{
     align-self: flex-end;
-    margin-bottom: 30px;
-    margin-right: 5px;
+   /*  margin-bottom: 30px;
+    margin-right: 5px; */
     width: 50px;
     height: 50px;
     background-color:#6C63FF;
@@ -197,6 +221,14 @@ color: #666666;
     align-items: center;
     cursor: url("../assets/handcursor.svg"),auto;
     outline: none;
+}
+
+@media (max-width:900px){
+    .todolist_actionBtn{
+        margin-right:5%;
+       
+    }
+
 }
 .todolist_actionBtn_nightMode{
     align-self: flex-end;

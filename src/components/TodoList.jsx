@@ -48,8 +48,8 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
          )
           })}
          </ul>
-         <TodoActions setIsOpen={setIsOpen} lightMode={lightMode}/>
         </div>
+        <TodoActions setIsOpen={setIsOpen} lightMode={lightMode}/>
       </div>
     )
 }
