@@ -1,6 +1,6 @@
 import { useState,useEffect} from 'react';
-import Modal from './components/Modal.jsx';
-import TodoList from './components/TodoList.jsx';
+import Modal from './components/Modal/Modal.jsx';
+import TodoList from './components/TodoListComponents/TodoList.jsx';
 import "./index.css"
 
 

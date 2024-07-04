@@ -1,9 +1,9 @@
 
-import TodoItem from "./TodoItem.jsx"
+import TodoItem from "./TodoItem"
 import TodoHeader from "./TodoHeader";
-import TodoActions from "./TodoActions";
-import Detective from "../assets/Detective.png";
-import DedectiveNightmode from "../assets/DetectiveNightmode.svg"
+import TodoActions from "../Modal/TodoActions";
+import Detective from "../../assets/Detective.png";
+import DedectiveNightmode from "../../assets/DetectiveNightmode.svg"
 import "./TodoList.css"
 
 

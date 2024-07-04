@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import TodoInput from "./TodoInput";
+import TodoInput from "../TodoListComponents/TodoInput";
 import "./Modal.css"
 
 

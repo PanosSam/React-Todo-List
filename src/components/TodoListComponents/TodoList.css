@@ -21,7 +21,7 @@ align-items: center;
 }
 
 .light-mode-cursor{
-    cursor: url("../assets/handcursor.svg"),auto;
+    cursor: url("../../assets/handcursor.svg"),auto;
 }
 
 .todolist_nightMode{
@@ -43,7 +43,7 @@ align-items:center;
 }
 
 .night-mode-cursor{
-    cursor: url("../assets/handcursorwhite.svg"),auto;
+    cursor: url("../../assets/handcursorwhite.svg"),auto;
 }
 
 .todolist_container{
@@ -241,7 +241,7 @@ color: #666666;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: url("../assets/handcursor.svg"),auto;
+    cursor: url("../../assets/handcursor.svg"),auto;
     outline: none;
 }
 
@@ -264,7 +264,7 @@ color: #666666;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: url("../assets/handcursorwhite.svg"),auto;
+    cursor: url("../../assets/handcursorwhite.svg"),auto;
     outline: none;
 }
 
@@ -282,7 +282,7 @@ width:62px;
 height: 18px;
 gap: 10px;
 display: none;
-cursor: url("..assets/handcursor.svg"), auto;
+cursor: url("../../assets/handcursor.svg"), auto;
 }
 
 @media (max-width:900px){
@@ -321,7 +321,7 @@ cursor: url("..assets/handcursor.svg"), auto;
 
 .todoItem_editInput{
     
-    width: 420px;
+    max-width: 420px;
     height: 20px;
     font-family: "Kanit", sans-serif;
     font-size: 20px;
@@ -335,7 +335,7 @@ cursor: url("..assets/handcursor.svg"), auto;
 }
 
 .todoItem_editInput_nightMode{
-    width: 420px;
+    max-width: 420px;
     height: 20px;
     font-family: "Kanit", sans-serif;
     font-size: 20px;
@@ -363,7 +363,7 @@ font-weight: 500;
 line-height: 18px;
 text-align: left;
 border:  2px solid rgba(108, 99, 255, 1);
-cursor: url("../assets/handcursor.svg"),auto;
+cursor: url("../../assets/handcursor.svg"),auto;
 }
 
 .todoItem_cancelSave{
@@ -381,7 +381,7 @@ font-weight: 500;
 line-height: 18px;
 text-align: left;
 border:  2px solid rgba(108, 99, 255, 1);
-cursor: url("../assets/handcursor.svg"),auto;
+cursor: url("../../assets/handcursor.svg"),auto;
 }
 
 .todoItem{
@@ -487,7 +487,7 @@ text-align: left;
 }
 
 .todoItem_label:hover{
-    cursor: url("../assets/handcursor.svg"),auto;
+    cursor: url("../../assets/handcursor.svg"),auto;
 }
 
 .todoItem_checkbox{
@@ -519,13 +519,13 @@ border-radius: 2px;
 border-color: #6C63FF;
 background-color: transparent;
 outline: 1px solid #6C63FF;
-cursor: url("../assets/handcursorwhite.svg"),auto;
+cursor: url("../../assets/handcursorwhite.svg"),auto;
 }
 
 .todoItem_label .todoItem_checkbox:checked ~ .checkmark{
    
     background-color: #6C63FF;
-    background-image: url("../assets/tick.svg");
+    background-image: url("../../assets/tick.svg");
     background-repeat: no-repeat ;
     background-position:center;
 } 
@@ -533,7 +533,7 @@ cursor: url("../assets/handcursorwhite.svg"),auto;
 .todoItem_label .todoItem_checkbox_nightMode:checked ~ .checkmark_nightMode{
    
     background-color: #6C63FF;
-    background-image: url("../assets/tick.svg");
+    background-image: url("../../assets/tick.svg");
     background-repeat: no-repeat ;
     background-position:center;
 } 

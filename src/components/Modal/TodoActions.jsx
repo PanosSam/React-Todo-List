@@ -1,4 +1,4 @@
-import addbutton from "../assets/addbutton.png"
+import addbutton from "../../assets/addbutton.png"
 
 
 export default function TodoActions({setIsOpen, lightMode}) {

@@ -1,7 +1,7 @@
-import trashcan from "../assets/trashcan.svg"
-import trashcanRed from "../assets/trashcanRed.svg"
-import pengrey from "../assets/pengrey.svg"
-import penpurple from "../assets/penpurple.svg"
+import trashcan from "../../assets/trashcan.svg"
+import trashcanRed from "../../assets/trashcanRed.svg"
+import pengrey from "../../assets/pengrey.svg"
+import penpurple from "../../assets/penpurple.svg"
 import { useState } from "react"
 
 export default function TodoItem({ completed, id, title, toggleTodo, deleteTodo,lightMode,editTodo }){

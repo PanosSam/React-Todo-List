@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "./Modal.css";
+import "../Modal/Modal.css";
 
 export default  function TodoInput({title,setTitle,handle,lightMode}) {
   

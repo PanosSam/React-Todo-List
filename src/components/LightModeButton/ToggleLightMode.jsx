@@ -1,6 +1,6 @@
 import React,{ useEffect } from 'react'
-import moon from "../assets/moon.svg"
-import sun from  "../assets/sun.svg"
+import moon from "../../assets/moon.svg"
+import sun from  "../../assets/sun.svg"
 import "./ToggleLightMode.css"
 
 

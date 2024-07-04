@@ -1,6 +1,6 @@
 import { useRef } from "react"
-import mglass from "../assets/mglass.svg"
-import mglasswhite from "../assets/mglasswhite.svg"
+import mglass from "../../assets/mglass.svg"
+import mglasswhite from "../../assets/mglasswhite.svg"
 
 export default function SearchBar({ searchTerm, setSearchTerm,lightMode }){
 

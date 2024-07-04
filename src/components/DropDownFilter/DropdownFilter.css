@@ -30,7 +30,7 @@ font-weight: 500;
 line-height: 18px;
 text-align: left;
 border:  2px solid rgba(108, 99, 255, 1);
-cursor: url("../assets/handcursor.svg"),auto;
+cursor: url("../../assets/handcursor.svg"),auto;
 }
 
 .todolist_filter-btn_nightMode{
@@ -48,7 +48,7 @@ font-weight: 500;
 line-height: 18px;
 text-align: left;
 border:  2px solid rgba(108, 99, 255, 1);
-cursor: url("../assets/handcursor.svg"),auto;
+cursor: url("../../assets/handcursor.svg"),auto;
 }
 
 .todolist_filter-btn_open{

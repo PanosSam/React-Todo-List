@@ -1,6 +1,6 @@
 import { useState } from "react"
-import dropdown from "../assets/dropdown.svg"
-import dropup from "../assets/dropup.svg"
+import dropdown from "../../assets/dropdown.svg"
+import dropup from "../../assets/dropup.svg"
 import "./DropdownFilter.css"
 
 
