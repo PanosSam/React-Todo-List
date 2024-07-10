@@ -44,12 +44,9 @@ export default function TodoList({ todos, toggleTodo, deleteTodo,
             setLightMode ={setLightMode}
             lightMode={lightMode}
             editTodo={editTodo}
-            />
-         )
+            />)
           })}
          </ul>
         </div>
         <TodoActions setIsOpen={setIsOpen} lightMode={lightMode}/>
-      </div>
-    )
-}
+      </div>)}

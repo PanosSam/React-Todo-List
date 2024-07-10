@@ -3,9 +3,6 @@ import Modal from './components/Modal/Modal.jsx';
 import TodoList from './components/TodoListComponents/TodoList.jsx';
 import "./index.css"
 
-
-
-
 function App() {
   const [isOpen,setIsOpen]= useState(false); // This state defines if the modal is open or closed.
   const [todos,setTodos] =useState([]); //This state is used for setting the todos.
@@ -17,8 +14,7 @@ function App() {
      todos
      .filter(todo => { 
       // with this filter the user inputs a search term wich is run through the todo list and shows the updated results
-    return todo.title.toLowerCase().includes(searchTerm.toLowerCase())
-   })
+    return todo.title.toLowerCase().includes(searchTerm.toLowerCase())})
    .filter(todo => { 
     // this filter goes through the todo list and renders the result of comleteness depending on the selected filter.
     if (todoFilter === "completed") {
@@ -26,16 +22,14 @@ function App() {
     } else if (todoFilter === "incomplete") {
       return !todo.completed;
     }
-    return true; 
-  }); 
+    return true; }); 
   
   function addTodo(title){  //Declaring an addTodo function in order to keep the state up
     const newId = todos.length > 0 ? Math.max(...todos.map(todo => todo.id)) + 1 : 1;
     fetch('http://localhost:3000/todos/', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
-      },
+        'Content-Type': 'application/json'},
       body: JSON.stringify({id: newId.toString(), title, completed: false})/* The current version of 
       json-server1 does not support non-string IDs for entities.
       Install the stable version, npm install json-server@0, or (As you noted works) switch your IDs to strings. */
@@ -43,8 +37,7 @@ function App() {
     .then(response => response.json())
     .then(newTodo =>{
       setTodos(todos =>[...todos, newTodo]);
-    })
-  }
+    })}
   
 function toggleCompleted(id, completed){ //getting the id and completed status from the TodoItem
   fetch(`http://localhost:3000/todos/${id}`  , {
@@ -59,10 +52,7 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
     setTodos(currentTodos => 
       currentTodos.map(todo =>
         todo.id === id ? updatedTodo : todo
-      )
-    );
-  })
-}
+      ));})}
 
   function deleteTodo(id){
     fetch(`http://localhost:3000/todos/${id}`, {
@@ -72,14 +62,12 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
       setTodos(currentTodos => {
         return currentTodos.filter(todo => todo.id !==id)
       });
-    });
-  }
+    });}
   function editTodo(id,title){
     fetch(`http://localhost:3000/todos/${id}`, {
       method: `PUT`,
       headers: {
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json',},
       body: JSON.stringify({title})
     })
     .then(response=> response.json())
@@ -88,13 +76,10 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
         todo.id === id ? { ...todo, title: updatedTodo.title }: todo
       );
       setTodos(updatedTodos);
-    })
-    
-  }
+    })}
 
   function onClose(){ //closes the modal and enables scrolling to the body.
-    setIsOpen(false)
-  }
+    setIsOpen(false) }
   
   useEffect(() => {
     fetch('http://localhost:3000/todos')
@@ -102,10 +87,8 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
       .then(data => setTodos(data));
   }, []);
 
-    return (
-      
-    <div className='container' >
-      
+    return (      
+    <div className='container' >  
         <div className={lightMode ? "todolist light-mode-cursor" :
            "todolist_nightMode night-mode-cursor" }>
         <TodoList 
@@ -120,8 +103,7 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
         setSearchTerm={setSearchTerm} 
         todoFilter={todoFilter} 
         setFilter={setFilter}
-        editTodo={editTodo}
-        />
+        editTodo={editTodo}/>
         </div>
         <Modal 
         setLightMode ={setLightMode}
@@ -130,11 +112,7 @@ function toggleCompleted(id, completed){ //getting the id and completed status f
         onClose={onClose}  
         onSubmit={addTodo}
         />
-        
-      
     </div>
-    );
-  };
+    );};
   
-
 export default App

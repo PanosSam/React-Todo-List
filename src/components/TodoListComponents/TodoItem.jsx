@@ -11,29 +11,19 @@ const [isEditing, setIsEditing] = useState(false);
 const [newTitle, setNewTitle] = useState(title);
 
  function handleMouseOverDelete() { 
-    setMouseoverDelete(mouse => !mouse)
-}
-
+    setMouseoverDelete(mouse => !mouse)}
 function handleMouseOverEdit (){
-    setMouseOverEdit(mouse => !mouse)
-}
-
+    setMouseOverEdit(mouse => !mouse)}
 function handleEditClick() {
-    setIsEditing(true);
-  }
-
-  function handleSaveClick() {
+    setIsEditing(true);}
+function handleSaveClick() {
     editTodo(id, newTitle);
-    setIsEditing(false);
-  }
-
+    setIsEditing(false);}
   function handleCancelClick() {
     setIsEditing(false);
-    setNewTitle(title);
-  }
+    setNewTitle(title);}
 
-
-    return (
+ return (
     <li className="todoItem">
         <label className="todoItem_label">
             <input 

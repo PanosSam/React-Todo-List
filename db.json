@@ -1,13 +1,18 @@
 {
   "todos": [
     {
-      "title": "asdasd",
       "id": "1",
+      "title": "Samakovlis",
       "completed": false
     },
     {
       "id": "2",
-      "title": "asdasdad",
+      "title": "Panagiotis",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "samakovlis panagiotis",
       "completed": false
     }
   ]

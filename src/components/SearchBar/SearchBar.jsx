@@ -26,7 +26,4 @@ return(
           />
           <img className="todolist_searchBar-vector" src={lightMode ? mglass : mglasswhite }alt="" />
         </div>
-
-        
-     )
-}
+     )}

@@ -17,7 +17,6 @@ align-items: center;
         justify-content: center;
         align-items: center;
     }
-   
 }
 
 .light-mode-cursor{
@@ -54,9 +53,15 @@ flex-direction: column;
 align-items: center;
 }
 
-@media (max-width:750px) {
+@media (max-width:900px) {
     .todolist_container{
         width: 100%;
+    }
+}
+@media (max-width:600px) {
+    .todolist_container{
+        padding-left: 30%;
+
     }
 }
 
@@ -158,6 +163,12 @@ background-color: transparent;
     width: 400px;
  }
 }
+@media (max-width: 400px){
+ .todolist_searchBar{
+    display: flex;
+    width: 200px;
+ }
+}
 
 .todolist_searchBar_nightMode{
     position: relative;
@@ -178,6 +189,12 @@ background-color: transparent;
     .todolist_searchBar_nightMode{
        display: flex;
        width: 400px;
+    }
+   }
+   @media (max-width: 400px){
+    .todolist_searchBar_nightMode{
+       display: flex;
+       width: 200px;
     }
    }
 
@@ -247,13 +264,11 @@ color: #666666;
 
 @media (max-width:900px){
     .todolist_actionBtn{
-        margin-right:5%;
-       
-    }
-    .todolist_actionBtn_nightMode{
+        align-self: center;
         margin-right:5%;
     }
 }
+
 .todolist_actionBtn_nightMode{
     align-self: flex-end;
     width: 50px;
@@ -267,6 +282,14 @@ color: #666666;
     cursor: url("../../assets/handcursorwhite.svg"),auto;
     outline: none;
 }
+@media (max-width:900px){
+    .todolist_actionBtn_nightMode{
+        align-self: center;
+        margin-right:5%;
+    }
+}
+
+
 
 .todolist_actionBtn:hover {
     background-color: #534CC2;
@@ -393,6 +416,21 @@ cursor: url("../../assets/handcursor.svg"),auto;
     gap: 20px;
     z-index: 1;
 }
+@media (max-width:900px){
+    .todoItem{
+        width: 70%;
+        align-self: center;
+       
+    }
+}
+@media (max-width:400px){
+    .todoItem{
+        width: 60%;
+        align-self: center;
+       
+    }
+}
+
 
 .todoItem:first-child{
     border-top: none;
@@ -546,3 +584,18 @@ cursor: url("../../assets/handcursorwhite.svg"),auto;
     gap: 20px;
    overflow: auto;
 }
+@media (max-width:900px){
+    .todo_list{
+        width: 100%;
+        align-self: center;
+       
+    }
+}
+@media (max-width:400px){
+    .todo_list{
+        width:100%;
+        align-self: center;
+       
+    }
+}
+

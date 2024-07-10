@@ -3,21 +3,15 @@ import dropdown from "../../assets/dropdown.svg"
 import dropup from "../../assets/dropup.svg"
 import "./DropdownFilter.css"
 
-
-
-  export default function DropDownFilter({ todoFilter, setFilter,lightMode } ){
+  export default function DropDownFilter({ todoFilter, setFilter } ){
    const [openFilter, setOpenFilter] = useState(false)
 
-    
    function handleClick(){
-    setOpenFilter(open => !open)
-   }
+    setOpenFilter(open => !open) }
 
    function handleOptionClick(value) {
     setFilter(value);
-    setOpenFilter(false); 
-  }
-
+    setOpenFilter(false); }
 
   return (
     <div className="dropdownWrapper">
@@ -31,8 +25,4 @@ import "./DropdownFilter.css"
           <div className="option" value="completed" onClick={() => handleOptionClick('completed')} >Completed</div>
           <div className="option" value="incomplete" onClick={() => handleOptionClick('incomplete')}>Incomplete</div>
         </div>
-        
-      
-    </div>
-    );
-  };
+    </div>);};

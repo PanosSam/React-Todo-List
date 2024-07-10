@@ -2,52 +2,35 @@ import React, { useState,useEffect } from 'react'
 import TodoInput from "../TodoListComponents/TodoInput";
 import "./Modal.css"
 
-
-
 export default function Modal({isOpen, onClose, onSubmit,lightMode }){
   const [title, setTitle] = useState("");
-
-
   useEffect(() => {    //setting the Esc btn as another method of closing the modal.
     const handleEsc = (e) => {
       if (e.keyCode === 27) {
         e.preventDefault();
-        onClose();
-      }
-    };
+        onClose();}};
     if (isOpen) {
       window.addEventListener('keydown', handleEsc);
       document.body.style.overflow = 'hidden'; 
     } else {
       window.removeEventListener('keydown', handleEsc);
-      document.body.style.overflow = 'auto'; 
-    }
+      document.body.style.overflow = 'auto'; }
     return () => {
       window.removeEventListener('keydown', handleEsc);
     };
   }, [isOpen, onClose]);
-
-
-
-
-
 
 if (!isOpen) return null
 
   const handleSubmit = () => {
     onSubmit(title);
     setTitle("");
-    onClose();
-  };
+    onClose();};
   
   function handle(e) {
     if (e.keyCode === 13 ) {
       e.preventDefault(); 
-      handleSubmit()
-    }
-  }
- 
-
+      handleSubmit()}}
     return(
       <div className="container_modal" >
       <div className={lightMode ? "container_modal2": "container_modal2_nightMode" }>
@@ -64,8 +47,4 @@ if (!isOpen) return null
           <button className={lightMode ? "container_modal--addBtn" : "container_modal--addBtn_nightMode" }onClick={handleSubmit} >APPLY</button>
           </div>
       </div>
-    </div>
-       
-      
-    )
-}
+    </div>  )}
